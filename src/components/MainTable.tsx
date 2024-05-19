@@ -2,8 +2,9 @@ import fetchData from "../common/fetchData";
 import { useEffect, useState } from "react";
 import LineGraph from "./Graph/LineGraph";
 import _ from "lodash";
+import { NavLink } from "react-router-dom";
 
-interface Column {
+export interface Column {
     path: string;
     label: string;
 }
@@ -46,7 +47,7 @@ const MainTable = () => {
 
   return (
     <>
-    <h6 className="m-3 text-success">Task 1: Basic Table</h6>
+    <h6 className="m-4 text-success nav-font">Task 1: Basic Table</h6>
     <table className="table table-light table-bordered mt-3">
       <thead>
         <tr style={{ cursor: "pointer" }}>
@@ -60,7 +61,7 @@ const MainTable = () => {
       <tbody>
         {data.map((item) => (
           <tr key={item.year}>
-            <td>{item.year}</td>
+            <td><NavLink to={`/job-title/${item.year}`}>{item.year}</NavLink></td>
             <td>{item.totalJobs}</td>
             <td>{item.averageSalary.toFixed(3)}</td>
           </tr>

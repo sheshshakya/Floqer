@@ -1,0 +1,21 @@
+body {
+  background: linear-gradient(135deg, #e3ddfd, #fcedf0, #fbecef, #fffeff);
+  color: #333;
+}
+
+.nav-font {
+  font-family: "Domine";
+  font-weight: 600;
+}
+
+.font-color {
+  color: #8a72ca !important;
+  font-size: x-large;
+}
+
+.navbar {
+  border-radius: 20px;
+  height: 80px;
+  line-height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

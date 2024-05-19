@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import { GraphProps } from "./LineGraph";
 
-const AverageSalaryGraph: React.FC<GraphProps> = ({ data }) => {
+const AverageSalaryGraph = ({ data }: GraphProps) => {
   return (
     <ResponsiveContainer width="90%" height={400}>
       <LineChart data={data}>
