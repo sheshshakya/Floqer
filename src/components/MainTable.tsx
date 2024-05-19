@@ -2,12 +2,7 @@ import fetchData from "../common/fetchData";
 import { useEffect, useState } from "react";
 import LineGraph from "./Graph/LineGraph";
 import _ from "lodash";
-import { NavLink } from "react-router-dom";
-
-export interface Column {
-    path: string;
-    label: string;
-}
+import Table from "./Table/Table";
 
 const MainTable = () => {
   const { data, setData, loading, error } = fetchData();
@@ -27,48 +22,19 @@ const MainTable = () => {
     setData(sorted);
   }, [sortColumn, setSortColumn]);
 
-  if (loading) return <div className="spinner-border text-success"></div>;
+  if (loading) return <div className="spinner-border text-success m-4"></div>;
   if (error) return <div className="text-danger">{error}</div>;
-
-  const handleSort = (column: Column) => {
-    if (column.path === sortColumn.path)
-      setSortColumn({
-        ...sortColumn,
-        order: sortColumn.order === "asc" ? "desc" : "asc",
-      });
-    else setSortColumn({ path: column.path, order: "asc" });
-  };
-
-  const renderSortIcon = (column: Column) => {
-    if(column.path !== sortColumn.path) return null;
-    if(sortColumn.order === "asc") return <i className="fa fa-sort-asc"></i>
-    else return <i className="fa fa-sort-desc"></i>
-  }
 
   return (
     <>
-    <h6 className="m-4 text-success nav-font">Task 1: Basic Table</h6>
-    <table className="table table-light table-bordered mt-3">
-      <thead>
-        <tr style={{ cursor: "pointer" }}>
-          {columns.map((column) => (
-            <th key={column.path} onClick={() => handleSort(column)}>
-              {column.label} {renderSortIcon(column)}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item) => (
-          <tr key={item.year}>
-            <td><NavLink to={`/job-title/${item.year}`}>{item.year}</NavLink></td>
-            <td>{item.totalJobs}</td>
-            <td>{item.averageSalary.toFixed(3)}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    <LineGraph data={data} />
+      <h6 className="m-4 text-success nav-font">Task 1: Basic Table</h6>
+      <Table
+        columns={columns}
+        sortColumn={sortColumn}
+        setSortColumn={setSortColumn}
+        data={data}
+      />
+      <LineGraph data={data} />
     </>
   );
 };
