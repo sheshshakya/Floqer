@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/lodash": "^4.17.4",
+    "bootstrap": "^5.3.3",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-papaparse": "^4.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
