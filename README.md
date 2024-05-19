@@ -1,30 +1,17 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project provides insights into the salaries of Machine Learning Engineers from 2020 to 2024. It includes a basic table displaying the number of total jobs and average salary in USD for each year. Users can sort the table by any column. Additionally, there are analytics features, including a line graph showing salary trends over the years and a secondary table that appears when a user clicks on a specific year, displaying aggregated job titles and the number of jobs for that year. Furthermore, there's a bonus feature implemented using OpenAI's LLMs, where users can interact with a chat app to get insights from the data beyond the graphs.
 
-Currently, two official plugins are available:
+## Deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The website has been deployed on Netlify. You can access it [here](https://suyash-gaurav-floqer-assignment.netlify.app/).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setting up (Locally)
 
-- Configure the top-level `parserOptions` property like this:
+Setting Up
+To set up the project locally, follow these steps:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Clone the repository.
+Install the necessary dependencies using npm install.
+Run the development server with npm run dev
