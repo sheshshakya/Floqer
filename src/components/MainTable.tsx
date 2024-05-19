@@ -27,7 +27,7 @@ const MainTable = () => {
 
   return (
     <>
-      <h6 className="m-4 text-success nav-font">Task 1: Basic Table</h6>
+      <h6 className="m-4 text-success domine-font">Task 1: Basic Table</h6>
       <Table
         columns={columns}
         sortColumn={sortColumn}

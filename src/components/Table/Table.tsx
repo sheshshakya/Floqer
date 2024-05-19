@@ -20,7 +20,7 @@ interface Props {
 
 const Table = ({ data, columns, sortColumn, setSortColumn }: Props) => {
   return (
-    <table className="table table-light table-bordered mt-3">
+    <table className="table table-light table-bordered mt-3 domine-font">
       <TableHead
         columns={columns}
         sortColumn={sortColumn}

@@ -49,9 +49,9 @@ const JobTitleTable = () => {
 
   if (loading) return <div className="spinner-border text-success m-4"></div>;
   return (
-    <div className="m-5">
-      <h6 className="nav-font text-success">For year {year}</h6>
-      <table className="table table-light table-bordered mt-3">
+    <div className="m-5 table-container">
+      <h6 className="domine-font text-success">For year {year}</h6>
+      <table className="table table-light table-bordered mt-3 domine-font">
         <TableHead
           columns={columns}
           sortColumn={sortColumn}

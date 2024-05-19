@@ -10,10 +10,10 @@ const LineGraph = ({ data }: GraphProps) => {
   return (
     <>
       <h6 className="text-success m-5 nav-font">Task 2: Analytics</h6>
-      <div className="m-5">
+      <div className="m-3">
         <AverageSalaryGraph data={data} />
       </div>
-      <div className="m-5">
+      <div className="m-3">
         <TotalJobsGraph data={data} />
       </div>
     </>

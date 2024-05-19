@@ -3,7 +3,12 @@ body {
   color: #333;
 }
 
-.nav-font {
+.container {
+  width: 70% !important;
+  margin-right: 21rem !important;
+}
+
+.domine-font {
   font-family: "Domine";
   font-weight: 600;
 }
@@ -18,4 +23,45 @@ body {
   height: 80px;
   line-height: 80px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.table-container {
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  border-radius: 10px;
+  overflow: hidden !important;
+}
+
+.table thead th {
+  background-color: #8a72ca;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.table td, .table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6 !important;
+}
+
+@media (max-width: 600px) {
+  .font-color {
+    font-size: 15px;
+  }
+  .domine-font {
+    font-size: 15px !important;
+  }
+  .container {
+    width: 60% !important;
+  }
 }
