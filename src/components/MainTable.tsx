@@ -1,5 +1,6 @@
 import fetchData from "../common/fetchData";
 import { useEffect, useState } from "react";
+import LineGraph from "./Graph/LineGraph";
 import _ from "lodash";
 
 interface Column {
@@ -44,6 +45,8 @@ const MainTable = () => {
   }
 
   return (
+    <>
+    <h6 className="m-3 text-success">Task 1: Basic Table</h6>
     <table className="table table-light table-bordered mt-3">
       <thead>
         <tr style={{ cursor: "pointer" }}>
@@ -64,6 +67,8 @@ const MainTable = () => {
         ))}
       </tbody>
     </table>
+    <LineGraph data={data} />
+    </>
   );
 };
 
