@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { usePapaParse } from "react-papaparse";
 
 export interface SalaryData {
@@ -34,12 +34,12 @@ const fetchData = () => {
       .then((csvText) => {
         readString(csvText, {
           header: true,
-          complete: (result) => {
+          complete: (result: { data: any[]; }) => {
             setAllData(result.data as SalaryData[]);
             processData(result.data);
             setLoading(false);
           },
-          error: (err) => {
+          error: (err: { message: SetStateAction<string>; }) => {
             setError(err.message);
             setLoading(false);
           },

@@ -22,8 +22,8 @@ const AverageSalaryGraph = ({ data }: GraphProps) => {
         <Line
           type="monotone"
           dataKey="averageSalary"
-          stroke="#82ca9d"
-          dot={{ r: 5, stroke: "green", strokeWidth: 2, fill: "white" }}
+          stroke="#4fad72"
+          dot={{ r: 5, stroke: "green", strokeWidth: 1, fill: "green" }}
           strokeWidth={3}
         />
       </LineChart>

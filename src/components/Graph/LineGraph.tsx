@@ -1,6 +1,6 @@
 import { Data } from "../../common/fetchData";
-import AverageSalaryGraph from "./AverageSalaryGraph";
-import TotalJobsGraph from "./TotalJobsGraph";
+import AverageSalaryGraph from "./SalaryGraph";
+import TotalJobsGraph from "./JobsGraph";
 
 export interface GraphProps {
   data: Data[];
@@ -9,7 +9,7 @@ export interface GraphProps {
 const LineGraph = ({ data }: GraphProps) => {
   return (
     <>
-      <h6 className="text-success m-5 nav-font">Task 2: Analytics</h6>
+      <h6 className="m-4 text-success domine-font">Analytics:</h6>
       <div className="m-3">
         <AverageSalaryGraph data={data} />
       </div>

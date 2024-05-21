@@ -22,7 +22,7 @@ const TotalJobsGraph = ({ data }: GraphProps) => {
         <Line
           type="monotone"
           dataKey="totalJobs"
-          stroke="#9a7fe1"
+          stroke="#4D3F70"
           activeDot={{ r: 8 }}
           strokeWidth={3}
         />
