@@ -4,7 +4,6 @@ This project provides insights into the salaries of Machine Learning Engineers f
 
 ## Deployment
 
-The website has been deployed on Netlify. You can access it [here](https://suyash-gaurav-floqer-assignment.netlify.app/).
 
 
 ## Setting up (Locally)
